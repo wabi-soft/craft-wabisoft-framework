@@ -1,0 +1,31 @@
+{
+  "name": "wabisoft/framework",
+  "description": "Helper Plugin",
+  "type": "craft-plugin",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "WabiSoft",
+      "homepage": "https://wabisoft.com"
+    }
+  ],
+  "support": {
+    "email": "help@wabisoft.com",
+    "issues": "https://github.com/wabi-soft/craft-spreadsheet-object/issues?state=open",
+    "source": "https://github.com/wabi-soft/craft-spreadsheet-object",
+    "docs": "https://github.com/wabi-soft/craft-spreadsheet-object/blob/master/README.md"
+  },
+  "require": {
+    "craftcms/cms": "^4.0.0",
+    "php": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "wabisoft\\framework\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "WabiSoft Framework",
+    "handle": "wabisoft-framework"
+  }
+}
