@@ -7,9 +7,7 @@ use Craft;
 use craft\log\MonologTarget;
 use Monolog\Formatter\LineFormatter;
 use Psr\Log\LogLevel;
-use yii\base\Event;
-use craft\web\View;
-use craft\events\RegisterTemplateRootsEvent;
+use yii\log\Logger;
 
 class Plugin extends \craft\base\Plugin
 {
@@ -19,6 +17,22 @@ class Plugin extends \craft\base\Plugin
         /*
          * @link: https://putyourlightson.com/articles/adding-logging-to-craft-plugins-with-monolog
          */
+        $this->_registerLogTarget();
+    }
+
+    /**
+     * Logs a message to our custom log target.
+     */
+    public function log(string $message, int $type = Logger::LEVEL_INFO): void
+    {
+        Craft::getLogger()->log($message, $type, 'my-plugin-handle');
+    }
+
+    /**
+     * Registers a custom log target, keeping the format as simple as possible.
+     */
+    private function _registerLogTarget(): void
+    {
         Craft::getLogger()->dispatcher->targets[] = new MonologTarget([
             'name' => 'wabisoft',
             'categories' => ['wabisoft'],
