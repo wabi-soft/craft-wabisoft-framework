@@ -59,7 +59,7 @@ class TemplateLoader
              return Craft::$app->view->renderTemplate('wabisoft-framework/dev/template-path', ['template'=> $template, 'content' => $content], View::TEMPLATE_MODE_CP);
         }
         if(isset($showHierarchy)) {
-            return Craft::$app->view->renderTemplate('wabisoft-framework/dev/template-hierarchy', ['templates'=> $templates, 'content' => $content], View::TEMPLATE_MODE_CP);
+            return Craft::$app->view->renderTemplate('wabisoft-framework/dev/template-hierarchy', ['templates'=> $templates, 'content' => $content, 'active' => $template], View::TEMPLATE_MODE_CP);
         }
 
     }
