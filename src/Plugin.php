@@ -25,7 +25,7 @@ class Plugin extends \craft\base\Plugin
      */
     public function log(string $message, int $type = Logger::LEVEL_INFO): void
     {
-        Craft::getLogger()->log($message, $type, 'my-plugin-handle');
+        Craft::getLogger()->log($message, $type, 'wabisoft');
     }
 
     /**
