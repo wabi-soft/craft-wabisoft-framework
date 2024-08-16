@@ -3,7 +3,7 @@
   "description": "Helper Plugin",
   "type": "craft-plugin",
   "license": "proprietary",
-  "version": "1.1.0",
+  "version": "5.0.0",
   "authors": [
     {
       "name": "WabiSoft",
@@ -17,8 +17,8 @@
     "docs": "https://github.com/wabi-soft/craft-spreadsheet-object/blob/master/README.md"
   },
   "require": {
-    "craftcms/cms": "^4.0.0",
-    "php": "^8.0"
+    "craftcms/cms": "^4.0.0||^5.0.0",
+    "php": "^8.2"
   },
   "autoload": {
     "psr-4": {
